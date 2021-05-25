@@ -2,19 +2,15 @@ import {Link} from 'react-router-dom'
 import Button from './Button'
 import { FaTimes } from 'react-icons/fa'
 
-const Breakdown = ({breakdown}) => {
+const Breakdown = ({id}) => {
+    console.log(id)
     return (
         <footer>
-            {breakdown.map((subtask) => (
-                <>
-                <p>
-                    {`${subtask} `}
-                </p> 
+
+                    {`${id} `}
                 {/* <Button color='green' text='Close' onClick={onAdd}/>  */}
                 <FaTimes/>                   
-                </>                   
 
-            ))}
         </footer>
     )
 }

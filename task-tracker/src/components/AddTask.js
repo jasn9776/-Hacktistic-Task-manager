@@ -4,7 +4,9 @@ const AddTask = ({onAdd}) => {
 
     const [text, setText] = useState('');
     const [day, setDay] = useState('');
-    const [reminder, setReminder] = useState(false)
+    const [breakdown, setBreakdown] = useState('');
+    const [reminder, setReminder] = useState(false);
+
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -14,7 +16,7 @@ const AddTask = ({onAdd}) => {
             return
         }
 
-        onAdd({ text, day, reminder})
+        onAdd({ text, day, reminder, breakdown})
 
         setText('')
         setDay('')
@@ -36,6 +38,12 @@ const AddTask = ({onAdd}) => {
                 <input type='text' placeholder='Add
                 Day and Time' value={day} onChange={(e) =>
                     setDay(e.target.value)}/>
+            </div>
+            <div className='form-control'>
+                <label>Breakdown</label>
+                <input type='text' placeholder='Add
+                Breakdown' value={breakdown} onChange={(e) =>
+                    setBreakdown(e.target.value)}/>
             </div>
             <div className='form-control
             form-control-check'>

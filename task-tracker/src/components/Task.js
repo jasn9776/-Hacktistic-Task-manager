@@ -4,6 +4,8 @@ import App from '../App'
 import Footer from './Footer'
 import Breakdown from './Breakdown'
 const Task = ({task, onDelete, onToggle}) => {
+
+
     return (
         <div className={`task ${task.reminder ?
         'reminder' : ''}`} onDoubleClick={() =>
@@ -13,7 +15,7 @@ const Task = ({task, onDelete, onToggle}) => {
                 'red', cursor: 'pointer'}} onClick={() => onDelete(task.id)} />
             </h3>
             <h4>    {task.reminder ?
-        'reminder' : <Breakdown breakdown={task.breakdown} >  </Breakdown>    }</h4>
+        'reminder' : <Breakdown id={task.id} >  </Breakdown>    }</h4>
             <p> {task.day}</p>
         </div>
     )

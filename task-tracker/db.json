@@ -4,31 +4,29 @@
       "text": "Pick Apples",
       "day": "5th May 2021",
       "reminder": false,
-      "id": 1,
-      "breakdown": [
-        "1. cut grapes",
-        "2. peel onion",
-        "3.Add to pot"
-      ]
+      "id": 1
     },
     {
-      "text": "Pick Apples",
-      "day": "5th May 2021",
+      "text": "dd",
+      "day": "dd",
       "reminder": false,
-      "id": 1,
-      "breakdown": [
-        "1. cut grapes",
-        "2. peel onion",
-        "3.Add to pot"
-      ]
+      "breakdown": "dd",
+      "id": 2
     }
-    
   ],
-  "comments": [
+  "breakdowns": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "breakdown": [
+        {
+          "id": 1,
+          "text": "1. cut grapes"
+        },
+        {
+          "id": 2,
+          "text": "2. cut Melons"
+        }
+      ]
     }
   ]
 }

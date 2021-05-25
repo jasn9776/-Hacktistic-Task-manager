@@ -3,6 +3,7 @@ import Button from './Button'
 import { FaTimes } from 'react-icons/fa'
 import { useState, useEffect } from 'react';
 import Step from './Step'
+import AddSubtask from './AddSubTask';
 const Breakdown = ({id}) => {
 
   const data = [
@@ -24,6 +25,19 @@ const Breakdown = ({id}) => {
     setBreakdown(breakdown.filter((step) => step.id !== id))
   }
 
+  const addStep = (step) => {
+      const id = Math.floor(Math.random() *
+      10000) + 1
+      console.log(id)
+      const newSubtask = {id, ...step }
+
+      setBreakdown([...breakdown, newSubtask])
+      // const id = Math.floor(Math.random() *
+      // 10000) + 1
+      // console.log(id)
+      // const newTask = {id, ...task }
+      // setTasks([...tasks, newTask])
+    }
   
 
 
@@ -59,12 +73,17 @@ const Breakdown = ({id}) => {
 
     console.log(id)
     return (
-        <footer>
-
+      <>
+        <header>  
             {breakdown.map((step) => (
                 <Step id={step.id} text={step.text} onDelete={deleteStep}></Step> 
             ))}
+        </header>
+        <footer>
+
+          <AddSubtask onAdd={addStep}></AddSubtask>
         </footer>
+        </>
     )
 }
 

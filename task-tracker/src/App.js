@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Tasks from './components/Tasks';
 import About from './components/About';
 import AddTask from './components/AddTask';
+import Scheduler from './components/Scheduler';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -105,6 +106,7 @@ function App() {
         
         <Route path='/' exact render={(props) => (
           <>
+            <Scheduler></Scheduler>
             {showAddTask && <AddTask onAdd={addTask}/>}
             {tasks.length > 0 ? (
             <Tasks tasks={tasks} onDelete=

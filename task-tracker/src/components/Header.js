@@ -12,7 +12,7 @@ const Header = ({title, onAdd, onSchedulerClick, showAdd, showScheduler}) => {
         <header className='header'>
             <h1 >{title}</h1>
             <Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd}/>
-            <Button color={showScheduler ? 'red' : 'green'} text={showScheduler ? 'Close' : 'Open'} onClick={onSchedulerClick}/>
+            <Button color={showScheduler ? 'red' : 'green'} text={showScheduler ? 'Close Scheduler' : 'Open Scheduler'} onClick={onSchedulerClick}/>
 
         </header>
     )

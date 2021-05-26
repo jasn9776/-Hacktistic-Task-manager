@@ -4,7 +4,7 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 import { useState, useEffect } from 'react';
 
 const Scheduler = () => {
-    const[tasks, setTasks] = useState([])
+    var [tasks, setTasks] = useState([])
 
 
     // tasks.map((task) => (
@@ -21,8 +21,8 @@ const Scheduler = () => {
           setTasks(tasksFromServer.map((task) => ({
             Id: 2,
             Subject: task.text,
-            StartTime: new Date(2018, 1, 15, 10, 0),
-            EndTime: new Date(2018, 1, 15, 12, 30),
+            StartTime: new Date(task.StartTime),
+            EndTime: new Date(task.EndTime),
             IsAllDay: false,
             Status: 'Completed',
             Priority: 'High'
@@ -61,7 +61,7 @@ const Scheduler = () => {
     ];
 
 
-        return (<ScheduleComponent height='550px' selectedDate={new Date(2018, 1, 15)} eventSettings={{ dataSource: tasks,
+        return (<ScheduleComponent height='550px' selectedDate={new Date()} eventSettings={{ dataSource: tasks,
             fields: {
                 id: 'Id',
                 subject: { name: 'Subject' },

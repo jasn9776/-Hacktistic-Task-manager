@@ -61,7 +61,7 @@ const Scheduler = () => {
     ];
 
 
-        return (<ScheduleComponent height='550px' selectedDate={new Date()} eventSettings={{ dataSource: tasks,
+        return (<ScheduleComponent height='550px' selectedDate={new Date()} currentView="Day" eventSettings={{ dataSource: tasks,
             fields: {
                 id: 'Id',
                 subject: { name: 'Subject' },

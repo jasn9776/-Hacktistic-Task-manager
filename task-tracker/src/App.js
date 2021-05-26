@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
+  const [showScheduler, setScheduler] = useState(false)
   const[tasks, setTasks] = useState([])
 
   useEffect(() => {
@@ -101,12 +102,17 @@ function App() {
       <div className="container">
         <Header 
           onAdd={() => setShowAddTask(!showAddTask)}
-          showAdd={showAddTask}
-        />
+
+          onSchedulerClick={() => setScheduler(!showScheduler)}
+          showAdd={showAddTask} showScheduler={showScheduler}
+        > 
+
+        </Header>
         
         <Route path='/' exact render={(props) => (
           <>
-            <Scheduler></Scheduler>
+            {showScheduler && <Scheduler></Scheduler>}
+
             {showAddTask && <AddTask onAdd={addTask}/>}
             {tasks.length > 0 ? (
             <Tasks tasks={tasks} onDelete=

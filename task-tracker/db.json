@@ -12,6 +12,13 @@
       "reminder": false,
       "breakdown": "1111",
       "id": 2
+    },
+    {
+      "text": "Coding Practice",
+      "day": "6:00pm Monday",
+      "reminder": true,
+      "breakdown": "",
+      "id": 3
     }
   ],
   "breakdowns": [

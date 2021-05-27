@@ -2,6 +2,7 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import App from '../App'
 import Footer from './Footer'
+import Button from './Button'
 import Breakdown from './Breakdown'
 const Task = ({task, onDelete, onToggle}) => {
 
@@ -14,8 +15,8 @@ const Task = ({task, onDelete, onToggle}) => {
                 {task.text} <FaTimes style={{ color:
                 'red', cursor: 'pointer'}} onClick={() => onDelete(task.id)} />
             </h3>
-            <h4>    {task.reminder ?
-        'reminder' : <Breakdown id={task.id} >  </Breakdown>    }</h4>
+            {/* <Button color='green' text='Open Scheduler' onClick={() => {}}/> */}
+            <h4>    {<Breakdown id={task.id} >  </Breakdown>    }</h4>
             <p> {task.day}</p>
         </div>
     )

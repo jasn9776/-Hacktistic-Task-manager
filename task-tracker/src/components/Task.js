@@ -5,7 +5,7 @@ import Footer from './Footer'
 import Button from './Button'
 import Breakdown from './Breakdown'
 const Task = ({task, onDelete, onToggle}) => {
-
+    var startTime = new Date(task.StartTime);
 
     return (
         <div className={`task ${task.reminder ?
@@ -17,7 +17,7 @@ const Task = ({task, onDelete, onToggle}) => {
             </h3>
             {/* <Button color='green' text='Open Scheduler' onClick={() => {}}/> */}
             <h4>    {<Breakdown id={task.id} >  </Breakdown>    }</h4>
-            <p> {task.day}</p>
+            {/* <p> {task.day}</p> */}
         </div>
     )
 }

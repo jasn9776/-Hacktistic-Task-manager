@@ -31,12 +31,12 @@ const AddTask = ({onAdd}) => {
         <form className='add-form' onSubmit=
         {onSubmit}>
             <div className='form-control'>
-                <label>Task</label>
+                <label>Add Task</label>
                 <input type='text' placeholder='Add
                 Task' value={text} onChange={(e) =>
                 setText(e.target.value)} />
             </div>
-            <div className='form-control'>
+            {/* <div className='form-control'>
                 <label>Day and Time</label>
                 <input type='text' placeholder='Add
                 Day and Time' value={day} onChange={(e) =>
@@ -47,7 +47,7 @@ const AddTask = ({onAdd}) => {
                 <input type='text' placeholder='Add
                 Breakdown' value={breakdown} onChange={(e) =>
                     setBreakdown(e.target.value)}/>
-            </div>
+            </div> */}
             <DateTimePicker
                 onChange={setStartTime}
                 value={startTime}

@@ -1,17 +1,31 @@
 {
   "tasks": [
     {
-      "text": "Pick Apples",
-      "day": "5th May 2021",
-      "reminder": false,
-      "id": 1
+      "text": "New Task",
+      "StartTime": "2021-05-26T04:48:25.049Z",
+      "EndTime": "2021-05-26T07:48:00.000Z",
+      "day": "Now",
+      "reminder": true,
+      "breakdown": "",
+      "id": 5
     },
     {
-      "text": "dd",
-      "day": "dd",
+      "text": "Presentation",
+      "StartTime": "2021-05-26T08:03:00.000Z",
+      "EndTime": "2021-05-26T09:39:00.000Z",
+      "day": "",
       "reminder": false,
-      "breakdown": "dd",
-      "id": 2
+      "breakdown": "",
+      "id": 6
+    },
+    {
+      "text": "Sleep",
+      "StartTime": "2021-05-26T14:00:00.000Z",
+      "EndTime": "2021-05-27T00:00:00.000Z",
+      "day": "Tonight",
+      "reminder": true,
+      "breakdown": "",
+      "id": 7
     }
   ],
   "breakdowns": [
